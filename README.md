@@ -55,7 +55,10 @@
 ---
 
 ## **6. Conclusion**  
-
+This paper discusses experiments performed with a DenseNet201-based architecture to detect various lung problems: bacterial pneumonia, viral pneumonia, COVID-19, and tuberculosis.  
+The baseline model of ResNet-50 has been documented to have a better performance compared to the SVM with VGG16 features, and a standalone CNN as ResNet-50 had higher accuracy and macro F1-score.
+  The DenseNet201 based model has performed well for classes such as ‘Normal’, ‘Tuberculosis’ and ‘Corona Virus Disease’ with a high degree of accuracy.  However, there is misclassification observed between ‘Bacterial Pneumonia’ and ‘Viral Pneumonia’. 
+  In future area of improvement, data augmentation techniques can be implemented to increase variability of the dataset for generalization purposes. Other architectures like EfficientNet and DenseNet can also be used to improve classification performance. Using other evaluation metrics such as ROC curves and area under the curves can be used to gain detailed insights on the model’s ability to predict each class.
 
 ---
 
