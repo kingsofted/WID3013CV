@@ -14,6 +14,9 @@
 ---
 
 ## **1. Introduction**  
+- Implementation of multi-disease classification for chest X-rays
+- Based on DenseNet201 architecture
+- How AI increase the efficieny of doctors
 
 
 ---
