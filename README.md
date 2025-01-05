@@ -110,11 +110,18 @@ To address these limitations and further enhance performance:
 ---
 
 ## **6. Conclusion**  
-This paper discusses experiments performed with a DenseNet201-based architecture to detect various lung problems: bacterial pneumonia, viral pneumonia, COVID-19, and tuberculosis. The baseline model of ResNet-50 has been documented to have a better performance compared to the SVM with VGG16 features, and a standalone CNN as ResNet-50 had higher accuracy and macro F1-score.
+This paper discusses experiments performed with a DenseNet201-based architecture to detect various lung problems: bacterial pneumonia, viral pneumonia, COVID-19, and tuberculosis[5].  
 
-The DenseNet201 based model has performed well for classes such as ‘Normal’, ‘Tuberculosis’ and ‘Corona Virus Disease’ with a high degree of accuracy.  However, there is misclassification observed between ‘Bacterial Pneumonia’ and ‘Viral Pneumonia’. 
+This paper explored mainly using advanced deep learning techniques to improve accuracy and efficiency while diagnosing lung diseases. These techniques include fine-tuning, advanced optimization algorithms like Adam optimizer, and the use of dense layers in DenseNet201’s architecture. 
 
-In future area of improvement, data augmentation techniques can be implemented to increase variability of the dataset for generalization purposes. Other architectures like EfficientNet and DenseNet can also be used to improve classification performance. Using other evaluation metrics such as ROC curves and area under the curves can be used to gain detailed insights on the model’s ability to predict each class.
+Fine-tuning technique was used to enable the model to focus on patterns specific to chest X-Rays for more accurate lung disease diagnosis. Adam optimization enabled the model to overcome detecting noisy patterns which are present medical data. The use of dense layers enable the model to reuse useful features previously learned.
+
+The baseline model of DenseNet201(F1-score: 0.841) has been documented to have a better performance compared to the VGG19(F1-score: 0.829), VGG16(F1-score: 0.840) and XceptionV3(F1-score: 0.794).
+
+The DenseNet201 based model has performed well for classes such as ‘Normal’, ‘Tuberculosis’ and ‘Corona Virus Disease’ with a high degree of accuracy(weighted F1-score: 0.84).  However, there is misclassification observed between ‘Bacterial Pneumonia’ and ‘Viral Pneumonia’. 
+
+
+In future area of improvement, data augmentation techniques can be implemented to increase variability of the dataset for generalization purposes. Other architectures like EfficientNet[10] can also be used to improve classification performance. Using other evaluation metrics such as ROC curves and area under the curves can be used to gain detailed insights on the model’s ability to predict each class.
 
 ---
 
