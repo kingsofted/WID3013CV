@@ -46,12 +46,12 @@
 
 ## **4. Results**  
 
-### 4.1 Overall Performance
+### Overall Performance
 The DenseNet201 model achieved an overall accuracy of **84.8%** on a balanced test dataset of 2,000 images. Precision, recall, and F1-scores were computed for each class, with the model performing particularly well on classes like **Tuberculosis** and **COVID-19**, but struggling with **Viral Pneumonia**.
 
 ---
 
-### 4.2 Class-Wise Insights
+### Class-Wise Insights
 - **Tuberculosis**: Achieved the highest F1-score (**0.977**) with excellent precision and recall, showcasing the model’s ability to identify this class effectively.
 - **COVID-19**: Also performed strongly (F1-score: **0.951**), indicating that the model could differentiate COVID-19 features effectively from other conditions.
 - **Normal**: Achieved a high recall (**0.985**), ensuring minimal false negatives.
@@ -59,7 +59,7 @@ The DenseNet201 model achieved an overall accuracy of **84.8%** on a balanced te
 
 ---
 
-### 4.3 Comparative Analysis
+### Comparative Analysis
 The DenseNet201 model was benchmarked against baseline methods:
 - **SVM with VGG16 Features**: Achieved an accuracy of **78.2%**.
 - **Standalone CNN**: Improved to **81.5%**.
@@ -77,14 +77,15 @@ A confusion matrix revealed significant misclassifications in the **Viral Pneumo
 
 ## **5. Discussion**  
 
-### 5.1 Interpretation of Results
-The DenseNet201-based model demonstrated strong learning capabilities, as evidenced by a consistent decrease in training loss across epochs. Validation accuracy stabilized between **87% and 89%**, indicating robust generalization despite mild overfitting, as suggested by the gap between training and validation metrics. The test accuracy of approximately **84%**, alongside a test loss of **0.41**, closely aligns with validation trends, reinforcing the model's stability.
+### Interpretation of Results
+The DenseNet201-based model demonstrated strong learning capabilities, with validation accuracy stabilizing between **87% and 89%** and a test accuracy of **84%**. A test loss of **0.41** further supports the model's stability and generalization.
 
-Confusion matrix analysis shows high accuracy for classes such as **“Normal,” “Tuberculosis,”** and **“Corona Virus Disease”** but highlights misclassifications between **“Bacterial Pneumonia”** and **“Viral Pneumonia”**, likely due to similar visual features. The classification report supports this trend, with high precision and recall for **“Corona Virus Disease” (89%)**, moderate values for **“Viral Pneumonia” (79%)**, and lower precision and recall for **“Tuberculosis” (65%)**, attributed to class imbalance or limited representation. The weighted average **F1-score of 84%** corroborates the model's overall strong performance.
+The confusion matrix revealed high accuracy for classes like **“Normal,” “Tuberculosis,”** and **“Corona Virus Disease”**, while misclassifications between **“Bacterial Pneumonia”** and **“Viral Pneumonia”** highlighted overlapping visual features. Precision and recall were high for **“Corona Virus Disease” (89%)**, moderate for **“Viral Pneumonia” (79%)**, and lower for **“Tuberculosis” (65%)**, likely due to class imbalance. The weighted average **F1-score of 84%** underscores the model’s robust overall performance.
+
 
 ---
 
-### 5.2 Limitations
+### Limitations
 Despite promising results, this study has notable limitations:
 - **Class-Specific Feature Diversity**: Limited variability in **“Tuberculosis”** images restricts the model's ability to generalize effectively to diverse cases.
 - **Class Overlap**: Significant misclassifications between **“Bacterial Pneumonia”** and **“Viral Pneumonia”** stem from overlapping visual features, such as lung infiltrates, making these classes challenging to differentiate.
@@ -94,7 +95,7 @@ Despite promising results, this study has notable limitations:
 
 ---
 
-### 5.3 Potential Improvements
+### Potential Improvements
 To address these limitations and further enhance performance:
 1. **Advanced Data Augmentation**:
    - Incorporate rotation, scaling, and flipping to increase variability and improve generalizability.
