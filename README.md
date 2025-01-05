@@ -46,6 +46,32 @@
 
 ## **4. Results**  
 
+### 4.1 Overall Performance
+The DenseNet201 model achieved an overall accuracy of **84.8%** on a balanced test dataset of 2,000 images. Precision, recall, and F1-scores were computed for each class, with the model performing particularly well on classes like **Tuberculosis** and **COVID-19**, but struggling with **Viral Pneumonia**.
+
+---
+
+### 4.2 Class-Wise Insights
+- **Tuberculosis**: Achieved the highest F1-score (**0.977**) with excellent precision and recall, showcasing the model’s ability to identify this class effectively.
+- **COVID-19**: Also performed strongly (F1-score: **0.951**), indicating that the model could differentiate COVID-19 features effectively from other conditions.
+- **Normal**: Achieved a high recall (**0.985**), ensuring minimal false negatives.
+- **Viral Pneumonia**: Showed the weakest performance (F1-score: **0.641**, recall: **0.535**) and was frequently misclassified as **Bacterial Pneumonia**, suggesting significant feature overlap between the two classes.
+
+---
+
+### 4.3 Comparative Analysis
+The DenseNet201 model was benchmarked against baseline methods:
+- **SVM with VGG16 Features**: Achieved an accuracy of **78.2%**.
+- **Standalone CNN**: Improved to **81.5%**.
+- **DenseNet201**: Outperformed both baselines with an accuracy of **84.8%** and the highest macro F1-score (**0.841**).
+
+These results emphasize the advantage of leveraging pre-trained architectures like DenseNet201 for medical image classification tasks.
+
+---
+
+### Error Analysis
+A confusion matrix revealed significant misclassifications in the **Viral Pneumonia** class, often predicted as **Bacterial Pneumonia**. This highlights overlapping radiological features and underscores the need for further feature engineering or enhanced architectures to improve class separability.
+
 
 ---
 
